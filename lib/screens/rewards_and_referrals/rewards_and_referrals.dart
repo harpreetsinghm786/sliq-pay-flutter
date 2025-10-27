@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sliq_pay/screens/rewards_and_referrals/widgets/rewardsAppBar.dart';
+import 'package:sliqpay/screens/rewards_and_referrals/widgets/rewardsAppBar.dart';
 import '../../components/referral_tabBar/referral_tabBar.dart';
 
 class RewardsAndReferrals extends StatefulWidget {
