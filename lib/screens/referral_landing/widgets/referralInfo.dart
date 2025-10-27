@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:sliq_pay/constants/app_strings.dart';
+import 'package:sliqpay/constants/app_strings.dart';
 import '../../../components/referral_bottom_sheet/referral_bottom_sheet_controller.dart';
 import '../../../constants/app_icons.dart';
 import '../../../constants/app_textStyles.dart';

@@ -1,7 +1,7 @@
 import 'package:dotted_line/dotted_line.dart';
 import 'package:flutter/material.dart';
-import 'package:sliq_pay/constants/app_icons.dart';
-import 'package:sliq_pay/constants/app_strings.dart';
+import 'package:sliqpay/constants/app_icons.dart';
+import 'package:sliqpay/constants/app_strings.dart';
 import '../../../../../constants/app_colors.dart';
 import '../../../../../constants/app_constants.dart';
 import '../../../../../constants/app_textStyles.dart';

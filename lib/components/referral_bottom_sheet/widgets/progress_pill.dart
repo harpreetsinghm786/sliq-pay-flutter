@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:sliq_pay/constants/app_textStyles.dart';
+import 'package:sliqpay/constants/app_textStyles.dart';
 import '../../../constants/app_constants.dart';
 import '../../../constants/app_icons.dart';
 import '../../../utils/cut_corner_button.dart';

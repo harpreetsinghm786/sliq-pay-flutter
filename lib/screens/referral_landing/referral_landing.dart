@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart' hide Icons;
 import 'package:get/get.dart';
-import 'package:sliq_pay/screens/referral_landing/widgets/backgroundImage.dart';
-import 'package:sliq_pay/screens/referral_landing/widgets/referralInfo.dart';
-import 'package:sliq_pay/screens/referral_landing/widgets/topActionButtons.dart';
+import 'package:sliqpay/screens/referral_landing/widgets/backgroundImage.dart';
+import 'package:sliqpay/screens/referral_landing/widgets/referralInfo.dart';
+import 'package:sliqpay/screens/referral_landing/widgets/topActionButtons.dart';
 import '../../components/referral_bottom_sheet/referral_bottom_sheet.dart';
 import '../../components/referral_bottom_sheet/referral_bottom_sheet_controller.dart';
 import '../../constants/app_constants.dart';

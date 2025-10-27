@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:sliq_pay/components/referral_bottom_sheet/referral_bottom_sheet_controller.dart';
+import 'package:sliqpay/components/referral_bottom_sheet/referral_bottom_sheet_controller.dart';
 import '../../constants/app_constants.dart';
 import 'widgets/progress_pill.dart';
 import 'widgets/header_content.dart';
