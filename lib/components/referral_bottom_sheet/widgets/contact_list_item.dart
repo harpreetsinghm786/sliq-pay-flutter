@@ -7,8 +7,9 @@ import '../../../utils/leading_avatar.dart';
 
 class ContactListItem extends StatelessWidget {
   final int index;
+  final VoidCallback onTap;
 
-  const ContactListItem({super.key, required this.index});
+  const ContactListItem({super.key, required this.index,required this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +20,7 @@ class ContactListItem extends StatelessWidget {
           title: Text(AppStrings.defaultContactName, style: AppTextStyles.sub_heading),
           subtitle: Text(AppStrings.defaultContactNumber, style: AppTextStyles.text_content),
           trailing: GestureDetector(
-            onTap: () {},
+            onTap: onTap,
             child: Row(
               mainAxisSize: MainAxisSize.min,
               children: [

@@ -14,8 +14,7 @@ class referralInfo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Obx(
-              () => Text(
+        Obx(() => Text(
             controller.currentTitle,
             style: AppTextStyles.mainHeading,
             textAlign: TextAlign.center,
@@ -24,10 +23,8 @@ class referralInfo extends StatelessWidget {
         const SizedBox(height: 8),
         _ViewOfferDetails(),
         const SizedBox(height: 20),
-        Obx(
-              () => Image.asset(
-            controller.currentBanner,
-            height: 220,
+        Obx(() => Image.asset(
+            controller.currentBanner
           ),
         ),
       ],

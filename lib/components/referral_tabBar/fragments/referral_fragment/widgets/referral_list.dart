@@ -9,7 +9,7 @@ class ReferralList extends StatelessWidget {
     return ListView.builder(
       padding: EdgeInsets.zero,
       itemCount: 20,
-      itemBuilder: (context, index) => ReferralListTile(index: index),
+      itemBuilder: (context, index) => ReferralListTile(index: index,onTap: (){},),
     );
   }
 }

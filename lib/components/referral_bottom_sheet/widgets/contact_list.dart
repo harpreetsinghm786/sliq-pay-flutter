@@ -15,7 +15,7 @@ class ContactList extends StatelessWidget {
         itemBuilder: (BuildContext context, int index) {
           return Container(
             color: Colors.white,
-            child: ContactListItem(index: index),
+            child: ContactListItem(index: index,onTap: (){}),
           );
         },
       ),
