@@ -22,7 +22,7 @@ Widget leadingAvatar(String name, int index) {
   final avatarIndex = index % avatars.length;
 
   return CircleAvatar(
-    radius: 25,
+    radius: 30,
     backgroundImage: AssetImage(avatars[avatarIndex]['background'] as String),
     backgroundColor: Colors.transparent, // optional
     child: getAvatarText(name, avatarIndex),

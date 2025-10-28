@@ -22,9 +22,10 @@ class referralInfo extends StatelessWidget {
         ),
         const SizedBox(height: 8),
         _ViewOfferDetails(),
-        const SizedBox(height: 20),
+        // const SizedBox(height: 20),
         Obx(() => Image.asset(
-            controller.currentBanner
+            controller.currentBanner,
+            height: 230
           ),
         ),
       ],

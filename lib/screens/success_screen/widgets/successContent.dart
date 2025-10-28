@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../../constants/app_colors.dart';
 import '../../../constants/app_constants.dart';
 import '../../../constants/app_images.dart';
 import '../../../constants/app_strings.dart';
@@ -18,16 +19,17 @@ class successContent extends StatelessWidget {
           style: AppTextStyles.mainHeading,
           textAlign: TextAlign.center,
         ),
-        SizedBox(height: AppConstants.pad_20),
+        SizedBox(height: AppConstants.pad_15),
         Text(
           AppStrings.successAmount,
           style: const TextStyle(
             fontSize: 56,
             fontFamily: AppTextStyles.malinton,
-            fontWeight: FontWeight.bold,
+            fontWeight: FontWeight.w700,
+            color: AppColors.mainHeadingColor
           ),
         ),
-        SizedBox(height: AppConstants.pad_20),
+        SizedBox(height: AppConstants.pad_10),
         Text(
           AppStrings.successDescription,
           textAlign: TextAlign.center,

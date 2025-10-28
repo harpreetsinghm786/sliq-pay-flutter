@@ -31,7 +31,7 @@ class ReferralListTile extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: SizedBox(
-        width: 100,
+        width: 80,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [

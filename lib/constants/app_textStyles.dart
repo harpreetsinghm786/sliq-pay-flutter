@@ -11,10 +11,10 @@ class AppTextStyles{
 
   //text_Styles
   static const TextStyle mainHeading = TextStyle(
-    fontSize: AppConstants.font_24,
-    fontWeight: FontWeight.w800,
+    fontSize: AppConstants.font_20,
+    fontWeight: FontWeight.w600,
     fontFamily: malinton,
-    color: AppColors.darkBlackPrimary,
+    color: AppColors.mainHeadingColor,
   );
   static const TextStyle buttonText = TextStyle(
     fontSize: AppConstants.font_18,
@@ -26,9 +26,9 @@ class AppTextStyles{
 
   static const TextStyle heading = TextStyle(
     fontSize: AppConstants.font_18,
-    fontWeight: FontWeight.w600,
+    fontWeight: FontWeight.w700,
     fontFamily: malinton,
-    color: AppColors.darkBlackPrimary,
+    color: AppColors.mainHeadingColor,
   );
   static const TextStyle sub_heading = TextStyle(
     fontSize: AppConstants.font_18,
@@ -39,7 +39,7 @@ class AppTextStyles{
     color: AppColors.subtitleGray,
     fontSize: AppConstants.font_16,
     fontFamily: nunito,
-    fontWeight: FontWeight.w500,
+    fontWeight: FontWeight.w400,
   );
 
   static const TextStyle hrefText = TextStyle(

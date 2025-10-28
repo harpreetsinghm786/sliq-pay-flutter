@@ -21,7 +21,7 @@ class ProgressPill extends StatelessWidget {
             child: Container(
               decoration: BoxDecoration(color: Colors.white.withOpacity(0.7)),
               padding: EdgeInsets.only(
-                left: AppConstants.pad_10,
+                left: AppConstants.pad_5,
                 right: AppConstants.pad_10,
                 top: AppConstants.pad_5,
               ),
@@ -35,7 +35,7 @@ class ProgressPill extends StatelessWidget {
                           : AppIcons.ellipseSuccessPill,
                       height: AppConstants.icon_height,
                     ),
-                    const SizedBox(width: 5),
+                    const SizedBox(width:2),
                     Text(
                       controller.currentMessage,
                       style: controller.stateIndex == 0
@@ -48,7 +48,7 @@ class ProgressPill extends StatelessWidget {
             ),
           ),
           Container(
-            height: 10,
+            height: 5,
             decoration: BoxDecoration(color: Colors.white.withOpacity(0.7)),
           ),
         ],

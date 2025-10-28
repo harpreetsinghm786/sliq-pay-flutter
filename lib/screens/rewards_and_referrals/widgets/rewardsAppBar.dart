@@ -11,8 +11,8 @@ class rewardsAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.symmetric(
-        horizontal: AppConstants.pad_20,
-        vertical: AppConstants.pad_10,
+        horizontal: AppConstants.pad_15,
+        vertical: AppConstants.pad_15,
       ),
       decoration: BoxDecoration(
         color: Colors.white,

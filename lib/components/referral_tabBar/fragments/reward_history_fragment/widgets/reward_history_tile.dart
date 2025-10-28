@@ -10,7 +10,11 @@ class RewardHistoryTile extends StatelessWidget {
   final int index;
   final VoidCallback onTap;
 
-  const RewardHistoryTile({super.key, required this.index,required this.onTap});
+  const RewardHistoryTile({
+    super.key,
+    required this.index,
+    required this.onTap,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +24,6 @@ class RewardHistoryTile extends StatelessWidget {
       onTap: onTap,
       child: Container(
         color: Colors.white,
-        padding: EdgeInsets.only(bottom: AppConstants.pad_10),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -28,7 +31,9 @@ class RewardHistoryTile extends StatelessWidget {
               AppStrings.rewardEarnedText,
               style: AppTextStyles.heading,
             ),
+
             Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Text(
                   AppStrings.rewardDatePlaceholder,
@@ -42,29 +47,35 @@ class RewardHistoryTile extends StatelessWidget {
                 SizedBox(width: AppConstants.pad_5),
                 Image.asset(AppIcons.separator),
                 SizedBox(width: AppConstants.pad_5),
-                Row(
-                  children: [
-                    Image.asset(
-                      isTransferred
-                          ? AppIcons.tickCircle
-                          : AppIcons.clock,
-                      height: AppConstants.icon_height,
-                    ),
-                    SizedBox(width: AppConstants.pad_5),
-                    Text(
-                      isTransferred
-                          ? AppStrings.transferredToBankText
-                          : AppStrings.pendingTransferText,
-                      style: TextStyle(
-                        fontWeight: FontWeight.w400,
-                        fontFamily: AppTextStyles.nunito,
-                        fontSize: AppConstants.font_16,
-                        color: isTransferred
-                            ? AppColors.successPrimary
-                            : AppColors.warningPrimary,
+                Expanded(
+                  child: Row(
+                    children: [
+                      Image.asset(
+                        isTransferred
+                            ? AppIcons.tickCircle
+                            : AppIcons.clock,
+                        height: AppConstants.icon_height,
                       ),
-                    ),
-                  ],
+                      SizedBox(width: AppConstants.pad_5),
+                      Flexible(
+                        child: Text(
+                          isTransferred
+                              ? AppStrings.transferredToBankText
+                              : AppStrings.pendingTransferText,
+                          style: TextStyle(
+                            fontWeight: FontWeight.w400,
+                            fontFamily: AppTextStyles.nunito,
+                            fontSize: AppConstants.font_16,
+                            color: isTransferred
+                                ? AppColors.successPrimary
+                                : AppColors.warningPrimary,
+                          ),
+                          overflow: TextOverflow.ellipsis,
+                          maxLines: 1,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ],
             ),
