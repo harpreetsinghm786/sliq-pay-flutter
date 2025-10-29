@@ -34,6 +34,7 @@ class AppTextStyles{
     fontSize: AppConstants.font_18,
     fontFamily: nunito,
     fontWeight: FontWeight.w500,
+    overflow: TextOverflow.ellipsis
   );
   static const TextStyle text_content = TextStyle(
     color: AppColors.subtitleGray,

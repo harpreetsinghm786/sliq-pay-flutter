@@ -15,10 +15,6 @@ class HeaderContent extends StatelessWidget {
         color: Colors.white,
         padding: EdgeInsets.only(left: AppConstants.pad_25,right: AppConstants.pad_25,top: AppConstants.pad_20,
         bottom: AppConstants.pad_10),
-        // padding: const EdgeInsets.symmetric(
-        //   horizontal: AppConstants.pad_25,
-        //   vertical: AppConstants.pad_15,
-        // ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [

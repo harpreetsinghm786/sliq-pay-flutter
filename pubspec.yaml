@@ -37,6 +37,10 @@ dependencies:
   flutter_svg: ^2.0.9
   get: ^4.7.2
   dotted_line: ^3.2.2
+  permission_handler: ^11.3.0
+  flutter_contacts: ^1.1.9+2
+  url_launcher: ^6.3.0
+  share_plus: ^10.0.2
 
 dev_dependencies:
   flutter_test:
