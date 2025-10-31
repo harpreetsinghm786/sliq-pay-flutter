@@ -4,13 +4,6 @@ import 'app_colors.dart';
 
 class AppConstants{
 
-  static final List<Color> gradientColors = [
-    AppColors.darkGrayPrimary,
-    AppColors.mediumGrayPrimary,
-    AppColors.darkGraySecondary,
-  ];
-
-
 //paddings
   static const double pad_5 = 5.0;
   static const double pad_8 = 8.0;
@@ -26,6 +19,7 @@ class AppConstants{
   static const double font_16 = 16.0;
   static const double font_18 = 18.0;
   static const double font_24 = 24.0;
+  static const double font_20 = 20.0;
   static const double font_32 = 32.0;
   static const double font_40 = 40.0;
 
@@ -34,13 +28,15 @@ class AppConstants{
   static const double rad_10 = 10.0;
   static const double rad_15 = 15.0;
   static const double rad_20 = 20.0;
+  static const double rad_25 = 25.0;
+  static const double rad_30 = 30.0;
 
 //icon height
-  static const double icon_height=25;
+  static const double icon_height=18;
 
 //bottom_sheet_states
-  static final double max_state_bs = Platform.isIOS ? 0.85 : 0.88;
-  static final double min_state_bs = Platform.isIOS ? 0.48: 0.5;
+  static final double max_state_bs = Platform.isIOS ? 0.87 : 0.88;
+  static final double min_state_bs = Platform.isIOS ? 0.48: 0.45;
 
 //text_styles_Dark
   static const basePathImages = 'assets/images';

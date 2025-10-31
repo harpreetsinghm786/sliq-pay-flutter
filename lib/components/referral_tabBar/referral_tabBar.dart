@@ -35,20 +35,21 @@ class _ReferralTabBarState extends State<ReferralTabBar>
       child: Column(
         children: [
           Container(
-            height: 36,
-            margin: EdgeInsets.symmetric(horizontal: AppConstants.pad_20),
+            height: 44,
+            margin: EdgeInsets.symmetric(horizontal: AppConstants.pad_15),
             decoration: BoxDecoration(
               color: AppColors.tabBarColor,
-              borderRadius: BorderRadius.circular(AppConstants.rad_20),
+              borderRadius: BorderRadius.circular(AppConstants.rad_30),
             ),
             child: TabBar(
               controller: _tabController,
               indicatorSize: TabBarIndicatorSize.tab,
-              splashBorderRadius: BorderRadius.circular(AppConstants.pad_20),
+                indicatorPadding: const EdgeInsets.all(4),
+              splashBorderRadius: BorderRadius.circular(AppConstants.pad_30),
               isScrollable: false,
               indicator: BoxDecoration(
-                borderRadius: BorderRadius.circular(AppConstants.pad_20),
-                gradient: LinearGradient(colors: AppConstants.gradientColors)
+                borderRadius: BorderRadius.circular(AppConstants.pad_30),
+                gradient: AppColors.tabBarIndicatorGradient
               ),
               indicatorColor: Colors.transparent,
               labelColor: Colors.white,

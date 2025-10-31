@@ -13,15 +13,12 @@ class HeaderContent extends StatelessWidget {
       clipper: TopCutCornerClipper(cutSize: 20),
       child: Container(
         color: Colors.white,
-        padding: const EdgeInsets.symmetric(
-          horizontal: AppConstants.pad_25,
-          vertical: AppConstants.pad_25,
-        ),
+        padding: EdgeInsets.only(left: AppConstants.pad_25,right: AppConstants.pad_25,top: AppConstants.pad_20,
+        bottom: AppConstants.pad_10),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(AppStrings.inviteFriendsTitle, style: AppTextStyles.heading),
-            Text(AppStrings.viewAllText, style: AppTextStyles.hrefText),
           ],
         ),
       ),

@@ -1,8 +1,8 @@
 class AppStrings{
-  static const String appName='Sliq Pay';
-  static const String shareSliqPay = "Share Sliq Pay";
+  static const String appName='Sliq pay';
+  static const String shareSliqPay = "Share Sliq pay";
   // Contact list
-  static const String defaultContactName = "Harpreet Singh";
+  static const String defaultContactName = "Harpreet S";
   static const String defaultContactNumber = "+919877523018";
   static const String inviteButtonText = "Invite";
 

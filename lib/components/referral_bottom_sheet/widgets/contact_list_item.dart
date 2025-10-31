@@ -7,19 +7,28 @@ import '../../../utils/leading_avatar.dart';
 
 class ContactListItem extends StatelessWidget {
   final int index;
+  final VoidCallback onTap;
+  final String name;
+  final String number;
 
-  const ContactListItem({super.key, required this.index});
+  const ContactListItem({
+    super.key,
+    required this.index,
+    required this.onTap,
+    required this.name,
+    required this.number,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Container(
         color: Colors.white,
         child: ListTile(
-          leading: leadingAvatar(AppStrings.defaultContactName, index),
-          title: Text(AppStrings.defaultContactName, style: AppTextStyles.sub_heading),
-          subtitle: Text(AppStrings.defaultContactNumber, style: AppTextStyles.text_content),
+          leading: leadingAvatar(name, index),
+          title: Text(name, style: AppTextStyles.sub_heading),
+          subtitle: Text(number, style: AppTextStyles.text_content),
           trailing: GestureDetector(
-            onTap: () {},
+            onTap: onTap,
             child: Row(
               mainAxisSize: MainAxisSize.min,
               children: [

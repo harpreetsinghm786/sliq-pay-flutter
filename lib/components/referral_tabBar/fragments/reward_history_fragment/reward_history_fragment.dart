@@ -14,7 +14,7 @@ class _RewardHistoryFragmentState extends State<RewardHistoryFragment> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(AppConstants.pad_20),
+      padding: const EdgeInsets.all(AppConstants.pad_15),
       child: Column(
         children: [
           const RewardHistoryHeader(),

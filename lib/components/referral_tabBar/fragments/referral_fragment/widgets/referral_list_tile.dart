@@ -8,8 +8,9 @@ import '../../../../../utils/leading_avatar.dart';
 
 class ReferralListTile extends StatelessWidget {
   final int index;
+  final VoidCallback onTap;
 
-  const ReferralListTile({super.key, required this.index});
+  const ReferralListTile({super.key, required this.index,required this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -28,9 +29,9 @@ class ReferralListTile extends StatelessWidget {
 
   Widget _buildStatusIndicator(bool isJoined) {
     return GestureDetector(
-      onTap: () {},
+      onTap: onTap,
       child: SizedBox(
-        width: 100,
+        width: 80,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [

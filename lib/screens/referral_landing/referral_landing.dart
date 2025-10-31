@@ -27,13 +27,16 @@ class _ReferralLandingState extends State<ReferralLanding> {
           BackgroundImage(),
           SafeArea(
             child: Padding(
-              padding: EdgeInsets.all(AppConstants.pad_20),
-              child: Column(
-                children: [
-                  topActionButtons(),
-                  const SizedBox(height: 50),
-                  referralInfo(controller: controller),
-                ],
+              padding: EdgeInsets.all(AppConstants.pad_15),
+              child: Container(
+                height: MediaQuery.of(context).size.height * 0.6,
+                child: Column(
+                  children: [
+                    topActionButtons(),
+                    const SizedBox(height: 35),
+                    referralInfo(controller: controller),
+                  ],
+                ),
               ),
             ),
           ),

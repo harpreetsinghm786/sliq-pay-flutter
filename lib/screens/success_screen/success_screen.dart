@@ -16,7 +16,7 @@ class SuccessScreen extends StatelessWidget {
           background(),
           SafeArea(
             child: Padding(
-              padding: EdgeInsets.all(AppConstants.pad_20),
+              padding: EdgeInsets.all(AppConstants.pad_15),
               child: Column(
                 children: [
                   Expanded(flex: 9, child: successContent()),

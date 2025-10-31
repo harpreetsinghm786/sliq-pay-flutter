@@ -9,7 +9,7 @@ class RewardHistoryList extends StatelessWidget {
     return ListView.builder(
       padding: EdgeInsets.zero,
       itemCount: 20,
-      itemBuilder: (context, index) => RewardHistoryTile(index: index),
+      itemBuilder: (context, index) => RewardHistoryTile(index: index,onTap: (){},),
     );
   }
 }

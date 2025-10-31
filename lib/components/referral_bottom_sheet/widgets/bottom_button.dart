@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sliqpay/constants/app_colors.dart';
 import 'package:sliqpay/constants/app_strings.dart';
 import 'package:sliqpay/constants/app_textStyles.dart';
 import '../../../constants/app_constants.dart';
@@ -14,8 +15,8 @@ class BottomButton extends StatelessWidget {
     return Container(
       color: Colors.white,
       padding: const EdgeInsets.only(
-        left: AppConstants.pad_20,
-        right: AppConstants.pad_20,
+        left: AppConstants.pad_15,
+        right: AppConstants.pad_15,
         bottom: AppConstants.pad_20,
         top: AppConstants.pad_10,
       ),
@@ -23,7 +24,7 @@ class BottomButton extends StatelessWidget {
         onPressed: onPressed,
         child: Text(AppStrings.shareSliqPay, style: AppTextStyles.buttonText),
         cornersToClip: {Corner.topLeft, Corner.bottomRight},
-        gradient: LinearGradient(colors: AppConstants.gradientColors),
+        gradient: AppColors.primaryButtonGradient,
         cutSize: 16,
       ),
     );
