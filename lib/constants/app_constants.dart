@@ -1,6 +1,4 @@
-import 'package:flutter/material.dart';
 import 'dart:io' show Platform;
-import 'app_colors.dart';
 
 class AppConstants{
 

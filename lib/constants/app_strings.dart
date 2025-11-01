@@ -15,6 +15,7 @@ class AppStrings{
   static const String inviteFriendsMessage2 = "Great going! 1 friend joined, 2 more to go.";
   static const String inviteFriendsMessage3 = "Wowza! You added 3 friends to Sliq Pay";
   static const String inviteFriendsMessage4 = "Congratulations! You’ve earned this reward";
+  static const String noContactsText = 'No contacts found';
 
   static const String inviteFriendsTitle1 = "Invite 3 friends to Sliq Pay and Earn \$20";
   static const String inviteFriendsTitle2 = "Thank you, for adding 3 friends to Sliq Pay";

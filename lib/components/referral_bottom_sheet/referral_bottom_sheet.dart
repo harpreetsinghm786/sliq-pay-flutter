@@ -31,7 +31,7 @@ class _ReferralBottomSheetState extends State<ReferralBottomSheet> {
             ProgressPill(),
             const HeaderContent(),
             ContactList(scrollController: scrollController),
-            BottomButton(onPressed: controller.shareApp),
+            BottomButton(onPressed: () => controller.shareApp(context))
           ],
         );
       },
