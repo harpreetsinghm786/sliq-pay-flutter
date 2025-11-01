@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sliqpay/constants/app_colors.dart';
+import 'package:sliqpay/constants/app_strings.dart';
 import '../referral_bottom_sheet_controller.dart';
 import 'contact_list_item.dart';
 
@@ -35,32 +36,36 @@ class ContactList extends StatelessWidget {
               children: [
                 Container(
                     color: Colors.white,
-                    child: const Center(child: Text('No contacts found'))),
+                    child: const Center(child: Text(AppStrings.noContactsText))),
               ],
             ),
           );
         }
 
-        return ListView.builder(
-            padding: EdgeInsets.zero,
-            controller: scrollController,
-            itemCount: controller.contacts.length,
-            itemBuilder: (BuildContext context, int index) {
-              final contact = controller.contacts[index];
-              final name = contact.displayName ?? 'Unnamed';
-              final number = (contact.phones?.isNotEmpty ?? false)
-                  ? contact.phones!.first.number ?? ''
-                  : 'No number';
-              return Container(
-                color: Colors.white,
-                child: ContactListItem(index: index,onTap: () => controller.sendInvite(number),
-                  name: name,
-                  number: number,
-                ),
-              );
-            },
-          );
+        return Container(
+          color: Colors.white,
+          child: ListView.builder(
+              padding: EdgeInsets.zero,
+              controller: scrollController,
+              itemCount: controller.contacts.length,
+              itemBuilder: (BuildContext context, int index) {
+                final contact = controller.contacts[index];
+                final name = contact.displayName;
+                final number = (contact.phones?.isNotEmpty ?? false)
+                    ? contact.phones!.first.number ?? ''
+                    : 'No number';
+                return Container(
+                  color: Colors.white,
+                  child: ContactListItem(index: index,onTap: () => controller.sendInvite(number),
+                    name: name,
+                    number: number,
+                  ),
+                );
+              },
+            ),
+        );
       }),
     );
   }
 }
+

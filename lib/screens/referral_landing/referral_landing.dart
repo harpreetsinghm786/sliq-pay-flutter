@@ -33,7 +33,7 @@ class _ReferralLandingState extends State<ReferralLanding> {
                 child: Column(
                   children: [
                     topActionButtons(),
-                    const SizedBox(height: 35),
+                    SizedBox(height:MediaQuery.of(context).size.height*0.6 - (MediaQuery.of(context).size.height*0.6-60)),
                     referralInfo(controller: controller),
                   ],
                 ),

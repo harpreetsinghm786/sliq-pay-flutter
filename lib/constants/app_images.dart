@@ -9,4 +9,7 @@ class AppImages{
   static const background ='${AppConstants.basePathImages}/background.png';
   static const successBackground ='${AppConstants.basePathImages}/success_background.png';
   static const congrats = '${AppConstants.basePathImages}/congrats.png';
+  static const  male ='${AppConstants.basePathImages}/male.png';
+  static const dog ='${AppConstants.basePathImages}/dog.png';
+  static const cat = '${AppConstants.basePathImages}/cat.png';
 }

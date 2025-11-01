@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:sliqpay/constants/app_images.dart';
 import 'package:sliqpay/constants/app_strings.dart';
+import 'package:sliqpay/screens/referral_landing/widgets/endlessRoller.dart';
 import '../../../components/referral_bottom_sheet/referral_bottom_sheet_controller.dart';
 import '../../../constants/app_icons.dart';
 import '../../../constants/app_textStyles.dart';
@@ -14,7 +16,8 @@ class referralInfo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Obx(() => Text(
+        Obx(
+          () => Text(
             controller.currentTitle,
             style: AppTextStyles.mainHeading,
             textAlign: TextAlign.center,
@@ -22,14 +25,56 @@ class referralInfo extends StatelessWidget {
         ),
         const SizedBox(height: 8),
         _ViewOfferDetails(),
-        // const SizedBox(height: 20),
-        Obx(() => Image.asset(
-            controller.currentBanner,
-            height: 230
+        Container(
+          height: 230,
+          width: double.infinity,
+          alignment: Alignment.center,
+          child: Obx(
+                () => Stack(
+              alignment: Alignment.center,
+              children: [
+                Image.asset(
+                  controller.currentBanner,
+                  fit: BoxFit.contain,
+                  width: double.infinity,
+                ),
+                LayoutBuilder(
+                  builder: (context, constraints) {
+                    final rollerWidth = constraints.maxWidth * 0.12;
+                    final rollerHeight = constraints.maxHeight * 0.30;
+
+                    return Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        SizedBox(width: constraints.maxWidth * 0.03),
+                        EndlessRoller(
+                          itemWidth: rollerWidth,
+                          itemHeight: rollerHeight,
+                          isLocked: true,
+                          selectedImage: AppImages.male,
+                        ),
+                        SizedBox(width: constraints.maxWidth * 0.06),
+                        EndlessRoller(
+                          itemWidth: rollerWidth,
+                          itemHeight: rollerHeight,
+                        ),
+                        SizedBox(width: constraints.maxWidth * 0.06),
+                        EndlessRoller(
+                          itemWidth: rollerWidth,
+                          itemHeight: rollerHeight,
+                        ),
+                      ],
+                    );
+                  },
+                ),
+              ],
+            ),
           ),
-        ),
-      ],
-    );
+        )
+
+      ]);
+
+
   }
 }
 

@@ -4,6 +4,7 @@ import 'package:sliqpay/constants/app_strings.dart';
 import '../../constants/app_images.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:share_plus/share_plus.dart';
+import 'package:flutter/material.dart';
 
 
 class ReferralBottomSheetController extends GetxController {
@@ -58,7 +59,6 @@ class ReferralBottomSheetController extends GetxController {
     isLoading.value = true;
     if (await FlutterContacts.requestPermission()) {
       final contacts = await FlutterContacts.getContacts(withProperties: true);
-      print(contacts);
       this.contacts.assignAll(contacts);
       isLoading.value = false;
     } else {
@@ -78,10 +78,29 @@ class ReferralBottomSheetController extends GetxController {
     }
   }
 
-  void shareApp() {
+  // void shareApp() {
+  //   const appLink = "https://play.google.com/store/apps/details?id=com.sliqpay.app";
+  //   const message = "Hey! Check out SliqPay – the smart way to pay and earn rewards!\n$appLink";
+  //   Share.share(message, subject: "Invite to SliqPay");
+  // }
+
+
+
+  void shareApp(BuildContext context) {
     const appLink = "https://play.google.com/store/apps/details?id=com.sliqpay.app";
     const message = "Hey! Check out SliqPay – the smart way to pay and earn rewards!\n$appLink";
-    Share.share(message, subject: "Invite to SliqPay");
+
+    final box = context.findRenderObject() as RenderBox?;
+    if (box != null) {
+      Share.share(
+        message,
+        subject: "Invite to SliqPay",
+        sharePositionOrigin: box.localToGlobal(Offset.zero) & box.size,
+      );
+    } else {
+      Share.share(message, subject: "Invite to SliqPay");
+    }
   }
+
 
 }
