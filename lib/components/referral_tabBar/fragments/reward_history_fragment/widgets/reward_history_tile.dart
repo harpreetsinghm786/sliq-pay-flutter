@@ -1,0 +1,96 @@
+import 'package:dotted_line/dotted_line.dart';
+import 'package:flutter/material.dart';
+import 'package:sliqpay/constants/app_icons.dart';
+import 'package:sliqpay/constants/app_strings.dart';
+import '../../../../../constants/app_colors.dart';
+import '../../../../../constants/app_constants.dart';
+import '../../../../../constants/app_textStyles.dart';
+
+class RewardHistoryTile extends StatelessWidget {
+  final int index;
+  final VoidCallback onTap;
+
+  const RewardHistoryTile({
+    super.key,
+    required this.index,
+    required this.onTap,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final bool isTransferred = index % 2 != 0;
+
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        color: Colors.white,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              AppStrings.rewardEarnedText,
+              style: AppTextStyles.heading,
+            ),
+
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Text(
+                  AppStrings.rewardDatePlaceholder,
+                  style: TextStyle(
+                    fontWeight: FontWeight.w400,
+                    fontFamily: AppTextStyles.nunito,
+                    fontSize: AppConstants.font_16,
+                    color: AppColors.historySubTitleColor,
+                  ),
+                ),
+                SizedBox(width: AppConstants.pad_5),
+                Image.asset(AppIcons.separator),
+                SizedBox(width: AppConstants.pad_5),
+                Expanded(
+                  child: Row(
+                    children: [
+                      Image.asset(
+                        isTransferred
+                            ? AppIcons.tickCircle
+                            : AppIcons.clock,
+                        height: AppConstants.icon_height,
+                      ),
+                      SizedBox(width: AppConstants.pad_5),
+                      Flexible(
+                        child: Text(
+                          isTransferred
+                              ? AppStrings.transferredToBankText
+                              : AppStrings.pendingTransferText,
+                          style: TextStyle(
+                            fontWeight: FontWeight.w400,
+                            fontFamily: AppTextStyles.nunito,
+                            fontSize: AppConstants.font_16,
+                            color: isTransferred
+                                ? AppColors.successPrimary
+                                : AppColors.warningPrimary,
+                          ),
+                          overflow: TextOverflow.ellipsis,
+                          maxLines: 1,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+            Padding(
+              padding: EdgeInsets.symmetric(vertical: AppConstants.pad_20),
+              child: DottedLine(
+                dashLength: 4,
+                dashGapLength: 3,
+                lineThickness: 1,
+                dashColor: AppColors.borderGrayPrimary,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
