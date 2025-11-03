@@ -1,32 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:sliqpay/constants/app_colors.dart';
-import 'package:sliqpay/constants/app_strings.dart';
 import 'package:sliqpay/constants/app_textStyles.dart';
-import '../../../constants/app_constants.dart';
 import '../../../utils/cut_corner_button.dart';
 
 class BottomButton extends StatelessWidget {
   final VoidCallback onPressed;
+  final String title;
 
-  const BottomButton({super.key, required this.onPressed});
+  const BottomButton({super.key, required this.onPressed,required this.title});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.white,
-      padding: const EdgeInsets.only(
-        left: AppConstants.pad_15,
-        right: AppConstants.pad_15,
-        bottom: AppConstants.pad_20,
-        top: AppConstants.pad_10,
-      ),
-      child: CutCornerButton(
+    return CutCornerButton(
         onPressed: onPressed,
-        child: Text(AppStrings.shareSliqPay, style: AppTextStyles.buttonText),
+        child: Text(title, style: AppTextStyles.buttonText),
         cornersToClip: {Corner.topLeft, Corner.bottomRight},
         gradient: AppColors.primaryButtonGradient,
         cutSize: 16,
-      ),
-    );
+      );
   }
 }

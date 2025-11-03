@@ -51,4 +51,7 @@ class AppStrings{
   static const String successDescription =
       "Reward money will be deposited to your connected bank account in 3 business days";
   static const String doneButton = "Done";
+  static const String offerDetailsTitle='Terms and Conditions';
+  static const String bulletPoint = '•  ';
+  static const String offerDetailsButtonText='Continue';
 }

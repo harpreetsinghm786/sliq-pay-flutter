@@ -62,7 +62,6 @@ class ReferralBottomSheetController extends GetxController {
       this.contacts.assignAll(contacts);
       isLoading.value = false;
     } else {
-      print("Permission denied");
       isLoading.value = false;
     }
   }
