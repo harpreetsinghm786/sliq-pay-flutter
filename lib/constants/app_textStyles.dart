@@ -30,6 +30,7 @@ class AppTextStyles{
     fontFamily: malinton,
     color: AppColors.mainHeadingColor,
   );
+
   static const TextStyle sub_heading = TextStyle(
     fontSize: AppConstants.font_18,
     fontFamily: nunito,
@@ -97,5 +98,12 @@ class AppTextStyles{
     fontFamily: nunito,
     fontWeight: FontWeight.w400,
     fontSize: AppConstants.font_16,
+  );
+
+  static const TextStyle modelTitle = TextStyle(
+    fontSize: AppConstants.font_16,
+    fontWeight: FontWeight.w700,
+    fontFamily: malinton,
+    color: AppColors.inviteTextColor,
   );
 }

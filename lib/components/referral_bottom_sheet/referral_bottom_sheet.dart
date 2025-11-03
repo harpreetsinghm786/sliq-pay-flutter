@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sliqpay/components/referral_bottom_sheet/referral_bottom_sheet_controller.dart';
+import 'package:sliqpay/constants/app_strings.dart';
 import '../../constants/app_constants.dart';
 import 'widgets/progress_pill.dart';
 import 'widgets/header_content.dart';
@@ -26,13 +27,27 @@ class _ReferralBottomSheetState extends State<ReferralBottomSheet> {
       snap: true,
       snapSizes: [AppConstants.min_state_bs, AppConstants.max_state_bs],
       builder: (BuildContext context, ScrollController scrollController) {
-        return Column(
-          children: [
-            ProgressPill(),
-            const HeaderContent(),
-            ContactList(scrollController: scrollController),
-            BottomButton(onPressed: () => controller.shareApp(context))
-          ],
+        return Padding(
+          padding: EdgeInsets.only(
+            bottom: MediaQuery.of(context).viewInsets.bottom,
+          ),
+          child: Column(
+            children: [
+              ProgressPill(),
+              const HeaderContent(),
+              ContactList(scrollController: scrollController),
+          Container(
+            color: Colors.white,
+            padding: const EdgeInsets.only(
+              left: AppConstants.pad_15,
+              right: AppConstants.pad_15,
+              bottom: AppConstants.pad_20,
+              top: AppConstants.pad_10,
+            ),
+            child: BottomButton(onPressed: () => controller.shareApp(context),title: AppStrings.shareSliqPay,)
+          )
+            ],
+          ),
         );
       },
     );

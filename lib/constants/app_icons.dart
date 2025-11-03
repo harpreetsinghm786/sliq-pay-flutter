@@ -12,5 +12,6 @@ class AppIcons{
   static const tickCircleFill ='${AppConstants.basePathIcons}/tick-circle-fill.png';
   static const separator ='${AppConstants.basePathIcons}/separator.png';
   static const clock = '${AppConstants.basePathIcons}/clock.png';
+  static const close = '${AppConstants.basePathIcons}/close.png';
 
 }
